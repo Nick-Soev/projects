@@ -1,0 +1,74 @@
+.constrSlider {
+  position: relative;
+
+  &__item {
+    width: 250px;
+    height: 59px;
+    overflow: hidden;
+
+    img {
+      display: block;
+      height: 59px;
+      margin: 0 auto;
+    }
+  }
+
+  // arrow
+  .glide__arrow {
+    position: absolute;
+    display: block;
+    bottom: 10%;
+    z-index: 2;
+    opacity: 1;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+  .glide__arrow--left {
+    padding: 10px 20px;
+    left: -50px;
+    width: 10px;
+    height: 20px;
+    background: url(../img/icons/arrowL1.svg) center/50% no-repeat;
+  }
+  .glide__arrow--right {
+    padding: 10px 20px;
+    right: -40px;
+    width: 10px;
+    height: 20px;
+    background: url(../img/icons/arrow.svg) center/50% no-repeat;
+  }
+
+  // bullets
+  .glide__bullets {
+    position: absolute;
+    z-index: 2;
+    bottom: -20px;
+    left: 50%;
+    display: inline-flex;
+    list-style: none;
+    transform: translateX(-50%);
+  }
+  .glide__bullet {
+    cursor: pointer;
+    width: 9px;
+    height: 1px;
+    padding: 0;
+    background-color: #ffce7a31;
+    margin: 0 0.25em;
+    transition: all 100ms ease-in-out;
+  }
+
+  .glide__bullet:hover,
+  .glide__bullet:focus {
+    border: 1px solid #ffcf7a;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .glide__bullet--active {
+    background-color: #ffcf7a;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  
+}

@@ -1,0 +1,267 @@
+@import "null";
+@import "fonts";
+@import "mixin";
+
+body._lock {
+  overflow: hidden;
+}
+
+body.ie {
+  ._ibg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  ._ibg img {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.body {
+  background-color: #1e1e1d;
+  font-family: "GroReg";
+  color: #fff;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  letter-spacing: 0.02em;
+  line-height: 140%;
+
+  &._loaded {}
+}
+
+._space,
+.page {
+  flex: 1 0 auto;
+}
+
+._container {
+  max-width: 1215px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+._ibg {
+  position: relative;
+
+  img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
+
+.logo {
+  a {
+    font-family: "ScanHead";
+    font-size: 20px;
+    color: #fff;
+  }
+}
+
+.phone {
+  a {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #eccf94;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    img {
+      z-index: 3;
+    }
+  }
+
+  a::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    bottom: -66px;
+    width: 44px;
+    height: 103px;
+    background: linear-gradient(270.21deg,
+        rgba(249, 139, 77, 0.8) 18.08%,
+        rgba(255, 103, 82, 0.8) 68.72%);
+    filter: blur(25px);
+    z-index: 2;
+  }
+
+  a::after {
+    content: "";
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    width: 44px;
+    height: 103px;
+    background: linear-gradient(270.21deg,
+        rgba(255, 217, 196, 0.8) 18.08%,
+        rgba(255, 255, 255, 0.8) 68.72%);
+    filter: blur(25px);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    z-index: 2;
+  }
+
+  &:hover {
+    a::before {
+      display: none;
+    }
+
+    a::after {
+      display: none;
+    }
+  }
+}
+
+.h1 {
+  font-family: "GroThin";
+  font-size: calc((100vw - 320px) / (1280 - 320) * (64 - 28) + 28px);
+  letter-spacing: 0.05em;
+  line-height: 140%;
+  text-transform: uppercase;
+  background: linear-gradient(220deg,
+      #ffffff 49.37%,
+      rgba(255, 255, 255, 0) 99.78%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  @media (min-width: 1280px) {
+    font-size: 64px;
+  }
+}
+
+.h2 {
+  font-family: "GroThin";
+  font-size: calc((100vw - 320px) / (650 - 320) * (40 - 20) + 20px);
+  letter-spacing: 0.05em;
+  line-height: 140%;
+  text-transform: uppercase;
+  text-align: center;
+  background: linear-gradient(200deg, #ffffff 38%, rgba(255, 255, 255, 0) 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  @media (min-width: 650px) {
+    font-size: 40px;
+  }
+}
+
+.h3 {
+  font-size: calc((100vw - 320px) / (1280 - 320) * (24 - 20) + 20px);
+  line-height: 150%;
+  color: #ffffff;
+
+  @media (min-width: 1280px) {
+    font-size: 24px;
+  }
+}
+
+.main-btn {
+  button {
+    position: relative;
+    overflow: hidden;
+    font-family: "GroMed";
+    font-size: 18px;
+    text-align: center;
+    color: #121212;
+    background: #eccf94;
+    padding: 15px 64px;
+    border-radius: 2px;
+    z-index: 1;
+
+    span:nth-child(1) {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      left: 0;
+      top: 0px;
+      border-radius: 50%;
+      background: rgba(196, 117, 28, 0.9);
+      filter: blur(50px);
+      z-index: 2;
+      transition: all 0.5s ease;
+    }
+
+    span:nth-child(2) {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      right: 0;
+      bottom: 0px;
+      border-radius: 50%;
+      background: rgba(255, 217, 196, 0.8);
+      filter: blur(45px);
+      z-index: 1;
+      transition: all 0.5s ease;
+    }
+
+    &:hover {
+      span:nth-child(1) {
+        width: 50px;
+        height: 50px;
+      }
+
+      span:nth-child(2) {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+}
+
+.second-btn {
+  font-family: "GroReg";
+  font-size: 15px;
+  color: #fff;
+  padding: 14px 33px;
+  border: 1px solid #ceb787;
+  border-radius: 2px;
+  line-height: 140%;
+  transition: background-color .2s ease;
+
+  &:hover {
+    background-color: #2b2b2b;
+  }
+
+  &:active {
+    background-color: #1a1a1a;
+  }
+
+  @media (min-width: 550px) {
+    font-size: 18px;
+  }
+}
+
+@import "header";
+@import "menu";
+@import "mainS";
+@import "secondS";
+@import "refillS";
+@import "smartS";
+@import "descriptionS";
+@import "sliderDesc";
+@import "buttonS";
+@import "questS";
+@import "constrS";
+@import "constrForm";
+@import "constrSlider";
+@import "contactS";
+@import "footer";

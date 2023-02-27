@@ -1,0 +1,44 @@
+.sliderDesc {
+  position: relative;
+  padding: 0 5px;
+
+  .glide__arrow {
+    position: absolute;
+    display: block;
+    bottom: 10%;
+    z-index: 2;
+    opacity: 1;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+
+  .glide__arrow--left {
+    padding: 10px 20px;
+    left: 25px;
+    width: 10px;
+    height: 20px;
+    background: url(../img/icons/arrowL1.svg) center/50% no-repeat;
+  }
+  .glide__arrow--right {
+    padding: 10px 20px;
+    left: 65px;
+    width: 10px;
+    height: 20px;
+    background: url(../img/icons/arrow.svg) center/50% no-repeat;
+  }
+  .glide__arrow--disabled {
+    opacity: 0.3;
+  }
+
+  &__item {
+    background: #000;
+    height: calc((100vw - 320px) / (1024 - 320) * (345 - 220) + 220px);
+  }
+}
+@media (min-width: 1024px) {
+  .sliderDesc {
+    &__item {
+      height: 345px;
+    }
+  }
+}

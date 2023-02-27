@@ -1,0 +1,139 @@
+.newsS {
+  padding: 40px 0;
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item {
+    max-width: 360px;
+
+    &:first-child {
+      margin: 0 0 50px;
+    }
+  }
+
+  &__text {
+    margin: 30px 0 0;
+    font-size: 14px;
+    max-width: 380px;
+    line-height: 150%;
+    color: #5C5C50;
+
+    a {
+      font-weight: 700;
+      color: rgb(38, 36, 33);
+    }
+
+    a:hover {
+      color: rgb(82, 77, 70);
+    }
+  }
+
+  &__icons {
+    margin-top: 40px;
+    text-align: center;
+
+    a {
+      padding: 10px;
+    }
+
+  }
+
+  &__img-wrap {
+    display: flex;
+  }
+
+  &__img-item:last-child .newsS__img {
+    width: 160px;
+    height: 100%;
+    margin: 0 0 0 10px;
+  }
+
+  &__img-item:first-child .newsS__img:first-child {
+    margin: 0 0 10px;
+  }
+
+  &__img {
+    position: relative;
+    height: 160px;
+    width: 130px;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      object-fit: cover;
+    }
+
+  }
+}
+
+@media (min-width: 770px) {
+  .newsS {
+
+    &__wrap {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 -10px;
+    }
+
+    &__item {
+      padding: 0 10px;
+      max-width: 100%;
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+
+    &__text {
+      margin: 40px 0 0;
+      font-size: 16px;
+    }
+
+    &__icons {
+      text-align: left;
+      margin-top: calc((100vw - 770px) / (1280 - 770) * (110 - 50) + 50px);
+    }
+
+    &__img-item:last-child .newsS__img {
+      width: calc((100vw - 770px) / (1280 - 770) * (370 - 210) + 210px);
+    }
+
+    &__img {
+      height: calc((100vw - 770px) / (1280 - 770) * (240 - 150) + 150px);
+      width: calc((100vw - 770px) / (1280 - 770) * (220 - 130) + 130px);
+
+      img {
+        transition: height .3s ease;
+      }
+    }
+
+    &__img img:hover {
+      height: 120%;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .newsS {
+
+    &__icons {
+      margin-top: 110px;
+    }
+
+    &__img-item:last-child .newsS__img {
+      width: 370px;
+    }
+
+    &__img {
+      height: 240px;
+      width: 220px;
+    }
+  }
+}

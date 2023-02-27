@@ -1,0 +1,87 @@
+.product-card {
+  width: 290px;
+  margin: 0 auto;
+
+  &__title {
+    font-family: 'PlayBold';
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    color: rgba(27, 26, 23, 0.82);
+    margin: 0 0 15px;
+  }
+
+  &__price {
+    font-family: 'Prata';
+    font-size: 12px;
+    color: rgba(27, 26, 23, 0.82);
+  }
+
+  &__img {
+    position: relative;
+    width: 290px;
+    height: 290px;
+    border: 1px solid rgb(226, 208, 196);
+    border-radius: 50%;
+    z-index: 1;
+
+    img {
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      object-fit: cover;
+      z-index: 3;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 90%;
+      height: 100%;
+      top: 0;
+      left: -5px;
+      background: linear-gradient(90deg, #ffffff, #ffffff00);
+      z-index: 2;
+
+    }
+  }
+
+  &__footer {
+    margin: 20px 0 0;
+    position: relative;
+    padding: 0 0 0 50px;
+
+    a {
+      font-family: 'PlayReg';
+      font-size: 16px;
+      color: #1B1A17;
+    }
+
+    a:hover {
+      color: #D4B098;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 1px;
+      background: #8B8371;
+      top: 50%;
+      left: 0px;
+    }
+  }
+}
+
+@media (min-width: 660px) {
+  .product-card {
+    width: 310px;
+    padding: 10px;
+
+    &__img {
+      width: 310px;
+      height: 310px;
+    }
+  }
+}

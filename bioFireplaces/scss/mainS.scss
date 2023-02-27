@@ -1,0 +1,134 @@
+.mainS {
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex: 1 1 50%;
+    margin: 0 auto;
+  }
+
+  &__item-decor {
+    position: absolute;
+    width: calc((100vw - 320px) / (1280 - 320) * (390 - 290) + 290px);
+    height: 160px;
+    left: 40%;
+    top: 0;
+    transform: translateX(-50%);
+    background: #a74f02;
+    filter: blur(100px);
+    border-radius: 50%;
+
+    animation: flame 5s ease-in infinite;
+  }
+
+  &__price {
+    display: flex;
+    font-family: "GroLight";
+    color: #ffcf7a;
+    margin: 20px 0 40px;
+    p {
+      font-size: 18px;
+    }
+    span {
+      font-size: calc((100vw - 320px) / (1280 - 320) * (36 - 22) + 22px);
+    }
+  }
+
+  &__advantages-wrap {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__advantages-item {
+    text-align: center;
+    width: 125px;
+  }
+
+  &__advantages-icon {
+    margin: 0 0 15px;
+  }
+
+  &__advantages-text {
+    font-size: 14px;
+  }
+
+  &__item-img {
+    height: 100%;
+    position: relative;
+    margin: 40px 0 0;
+
+    img {
+      position: relative;
+      width: 100%;
+    }
+  }
+}
+
+@keyframes flame {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@media (min-width: 550px) {
+  .mainS {
+    &__wrap {
+      flex-wrap: nowrap;
+    }
+
+    &__item {
+      flex: 0 1 50%;
+      margin: 0;
+    }
+
+    &__price {
+      margin: 40px 0 80px;
+    }
+
+    &__advantages-wrap {
+      justify-content: start;
+    }
+
+    &__advantages-item {
+      &:first-child {
+        margin-right: calc((100vw - 550px) / (1280 - 550) * (80 - 20) + 20px);
+      }
+    }
+
+    &__item-img {
+      margin: 0;
+
+      img {
+        position: absolute;
+        width: 120%;
+        min-width: 300px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .mainS {
+    &__price {
+      span {
+        font-size: 36px;
+      }
+    }
+    &__advantages-item {
+      &:first-child {
+        margin-right: 80px;
+      }
+    }
+  }
+}

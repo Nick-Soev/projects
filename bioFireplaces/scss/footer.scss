@@ -1,0 +1,39 @@
+.footer {
+  padding: 30px 0;
+  border-top: 1px #232323 solid;
+  background: #121212;
+  
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__logo {
+    margin: 10px 110px 0 0;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+
+  &__date {
+    color: #6d6d6d;
+    margin: 10px 45px 0 0;
+  }
+
+  &__nameComp {
+    color: #6d6d6d;
+    margin: 10px 20px 0 0;
+  }
+
+  &__policy {
+    color: #6d6d6d;
+    margin: 10px 0 0 0;
+  }
+}

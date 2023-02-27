@@ -1,0 +1,49 @@
+.smartS {
+  margin: 100px 0 0;
+
+  &__title {
+    margin: 0 auto;
+  }
+
+  &__text {
+    position: relative;
+    font-family: "GroLight";
+    line-height: 150%;
+    font-size: calc((100vw - 320px) / (1280 - 320) * (20 - 14) + 14px);
+    margin: 30px auto;
+    text-align: center;
+    max-width: 550px;
+    letter-spacing: 0.03em;
+    z-index: 2;
+  }
+
+  &__img {
+    position: relative;
+    width: 100%;
+    max-height: 550px;
+    margin: 0 0 20px;
+    overflow: hidden;
+    top: -60px;
+
+    img {
+      position: relative;
+      width: 100%;
+      z-index: 10;
+      z-index: 1;
+    }
+  }
+}
+
+@media (min-width: 550px) {
+  .smartS {
+    margin: 200px 0 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .smartS {
+    &__text {
+      font-size: 20px;
+    }
+  }
+}

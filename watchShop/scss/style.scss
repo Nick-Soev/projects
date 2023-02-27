@@ -1,0 +1,185 @@
+@import "null";
+@import "fonts";
+
+
+body._lock {
+  overflow: hidden;
+}
+
+body.ie {
+  ._ibg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  ._ibg img {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.body {
+  font-family: 'RobReg';
+  color: rgb(68, 66, 64);
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  letter-spacing: 0.02em;
+  line-height: 140%;
+
+  &._loaded {}
+}
+
+._bg {
+  display: none;
+}
+
+._bg._active {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 8;
+}
+
+._space,
+.page {
+  flex: 1 0 auto;
+}
+
+._container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+._ibg {
+  position: relative;
+
+  img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  span {
+    margin: 0 0 0 5px;
+  }
+
+  span {
+    font-family: 'PlayReg';
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    color: #555248;
+  }
+}
+
+.phone {
+  a {
+    img {}
+  }
+}
+
+.icon-search {
+  button {
+    display: inline;
+    padding: 10px;
+  }
+}
+
+.icon-like,
+.icon-cart {
+
+  a {
+    position: relative;
+    display: block;
+    padding: 10px;
+  }
+
+  span {
+    display: none;
+  }
+
+  span._active {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 0 0;
+    right: 4px;
+    top: 04px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #E6C8B4;
+    font-size: 8px;
+  }
+}
+
+.h3 {
+  font-family: 'PlayReg';
+  font-size: calc((100vw - 320px) / (1280 - 320) * (32 - 24) + 24px);
+  color: #1B1A17;
+  line-height: 120%;
+
+  @media (min-width:1280px) {
+    font-size: 32px;
+  }
+}
+
+.main-btn {
+  padding: 26px 38px;
+  font-family: 'RobMed';
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #444240;
+  transition: background-color .2s ease;
+
+  &:hover {
+    background: #D4B098;
+  }
+}
+
+.second-btn {
+  padding: 25px 38px;
+  font-family: 'RobMed';
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  background: #D4B098;
+  transition: background-color .2s ease;
+
+  &:hover {
+    background: #444240;
+  }
+}
+
+@import "header";
+@import "menu";
+@import "mainS";
+@import "prodCard";
+@import "goodsSlidS";
+@import "descS";
+@import "newsS";
+@import "footer";

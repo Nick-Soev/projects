@@ -1,0 +1,40 @@
+.questS {
+  margin: 90px 0 0;
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 45px -20px 0;
+    justify-content: space-around;
+  }
+
+  &__item {
+    flex: 0 1 370px;
+    padding: 0 20px;
+    margin: 0 0 40px;
+  }
+
+  &__img {
+    min-width: 100%;
+    height: 230px;
+    background: #000;
+  }
+}
+
+@media (min-width: 550px) {
+  .questS {
+    &__img {
+ 
+      height: 267px;
+
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .questS {
+    &__item {
+      flex: 1 1 370px;
+    }
+  }
+}

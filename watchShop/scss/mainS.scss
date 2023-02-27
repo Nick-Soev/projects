@@ -1,0 +1,235 @@
+.mainS {
+  padding: 40px 0 40px;
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__item {
+    margin: 0 auto 30px;
+  }
+
+  &__title {
+    position: relative;
+    font-family: 'PlayReg';
+    font-size: calc((100vw - 320px) / (1280 - 320) * (45 - 26) + 26px);
+    color: #1B1A17;
+  }
+
+  &__subtitle {
+    font-family: 'PlayReg';
+    font-size: calc((100vw - 320px) / (1280 - 320) * (30 - 22) + 22px);
+    color: #1B1A17;
+    margin: 20px 0 30px;
+  }
+
+  &__text {
+    max-width: 260px;
+    font-family: 'RobLig';
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(27, 26, 23, 0.82);
+    margin: 0 0 40px;
+  }
+
+  &__img-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 360px;
+    width: 300px;
+    padding: 10px 0;
+  }
+
+  &__img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-height: 770px;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 100%;
+      z-index: 2;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    height: 110%;
+    right: 115px;
+    width: 200px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(180deg, rgba(234, 227, 212, 0) 0%, #EAE3D4 100%);
+    border-radius: 100% 0 0 100% / 50% 0 0 50%;
+    z-index: 1;
+  }
+
+  &__bg-bottom {
+    position: absolute;
+    bottom: 6px;
+    left: 10%;
+    transform: translate(0, 70%);
+    width: 200px;
+    height: 50px;
+    background: #ffffff;
+    z-index: 1;
+  }
+
+  &__img-price {
+    position: absolute;
+    font-family: 'Prata';
+    font-size: 14px;
+    color: #1B1A17;
+    left: -5px;
+    top: 17%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 25px;
+      background: #8B8371;
+      right: -35px;
+      top: 35%;
+    }
+  }
+
+  &__img-descr {
+    position: absolute;
+    font-family: 'Prata';
+    font-size: 12px;
+    color: #1B1A17;
+    bottom: 15%;
+    right: -5px;
+    z-index: 3;
+    white-space: nowrap;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 15px;
+      background: #000;
+      top: 50%;
+      left: -20px;
+    }
+  }
+}
+
+@media (min-width: 770px) {
+  .mainS {
+
+    &__wrap {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__item {
+      flex: 1 1 50%;
+      margin: 0;
+      padding: 20px 0 0 40px;
+    }
+
+    &__title {
+      // font-size: calc((100vw - 320px) / (1280 - 320) * (45 - 26) + 26px);
+    }
+
+    &__subtitle {
+      // font-size: calc((100vw - 320px) / (1280 - 320) * (30 - 22) + 22px);
+      margin: 25px 0 40px;
+    }
+
+    &__text {
+      margin: 0 0 60px;
+    }
+
+    &__img-wrap {
+      height: calc((100vw - 770px) / (1280 - 770) * (770 - 360) + 360px);
+      max-height: 770px;
+      width: 100%;
+      padding: 0;
+    }
+
+    &__bg {
+      height: 110%;
+      // right: 195px;
+      right: calc((100vw - 770px) / (1280 - 770) * (195 - 128) + 128px);
+      width: calc((100vw - 770px) / (1280 - 770) * (500 - 200) + 200px);
+      max-width: 500px;
+
+      &::after {
+        content: "";
+        // position: absolute;
+        // bottom: -11px;
+        // left: 50%;
+        // transform: translateX(-50%);
+        // width: 300px;
+        // height: 50px;
+        // background: #9b6a6a;
+        // z-index: 1;
+      }
+    }
+
+    &__bg-bottom {
+      bottom: 0;
+      width: calc((100vw - 770px) / (1280 - 770) * (500 - 200) + 200px);
+      height: calc((100vw - 770px) / (1280 - 770) * (100 - 50) + 50px);
+      max-height: 100px;
+      max-width: 500px;
+    }
+
+    &__img-price {
+      font-size: 16px;
+    }
+
+    &__img-descr {
+      font-size: 14px;
+    }
+  }
+
+}
+
+@media (min-width: 1280px) {
+  .mainS {
+    padding: 0 0 40px;
+
+    &__title {
+      font-size: 45px;
+    }
+
+    &__subtitle {
+      font-size: 30px;
+    }
+
+    &__bg {
+      right: 195px;
+    }
+
+    &__img-price {
+      left: 0px;
+
+      &::before {
+        width: 50px;
+        right: -65px;
+      }
+    }
+
+    &__img-descr {
+      font-size: 16px;
+
+      &::before {
+        width: 40px;
+        left: -50px;
+      }
+    }
+  }
+}

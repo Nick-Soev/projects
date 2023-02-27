@@ -1,0 +1,11 @@
+.buttonS {
+  margin: 100px 0 0;
+  text-align: center;
+  &__title {
+    font-family: "GroLight";
+    font-size: calc((100vw - 320px) / (1280 - 320) * (30 - 20) + 20px);
+  }
+  &__btn {
+    margin: 35px 0 0;
+  }
+}
