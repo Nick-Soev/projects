@@ -1,0 +1,2 @@
+let ourPlanet;
+let currentUser;
